@@ -1,0 +1,9 @@
+export const isArray = (par) => Object.prototype.toString.call(par) == "[object Array]";
+export const isObject = (par) => Object.prototype.toString.call(par) == "[object Object]";
+export const isElement = (par) => Object.prototype.toString.call(par).slice(8, 12) == "HTML";
+export const isFunction = (par) => Object.prototype.toString.call(par) == "[object Function]";
+export const isString = (par) => Object.prototype.toString.call(par) == "[object String]";
+export const isNumber = (par) => Object.prototype.toString.call(par) == "[object Number]";
+export const isUndefined = (data) => Object.prototype.toString.call(data) == "[object Undefined]";
+export const isNull = (data) => Object.prototype.toString.call(data) == "[object Null]";
+export const isBoolean = (data) => Object.prototype.toString.call(data) == "[object Boolean]";

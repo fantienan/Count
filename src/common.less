@@ -1,0 +1,74 @@
+  .displayFlex() {
+    display: -webkit-box !important; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box !important; /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox !important; /* 混合版本语法: IE 10 */
+    display: -webkit-flex !important; /* 新版本语法: Chrome 21+ */
+    display: flex !important; /* 新版本语法: Opera 12.1, Firefox 22+ */
+  }
+  
+  .flex(@num:1) {
+    -webkit-box-flex: @num; /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: @num; /* OLD - Firefox 19- */
+    -webkit-flex: @num; /* Chrome */
+    -ms-flex: @num; /* IE 10 */
+    flex: @num; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  }
+  
+  .alignItems(@type:center) {
+    -webkit-box-align-items: @type;
+    -moz-box-align-items: @type;
+    -webkit-align-items: @type;
+    -ms-align-items: @type;
+    align-items: @type;
+  }
+  
+  .flexDirection(@type:column) {
+    -webkit-box-flex-direction: @type;
+    -moz-box-flex-direction: @type;
+    -webkit-flex-direction: @type;
+    -ms-flex-direction: @type;
+    flex-direction: @type;
+  }
+  
+  .justifyContent(@type:space-around) {
+    -webkit-box-justify-content: @type;
+    -moz-box-justify-content: @type;
+    -webkit-justify-content: @type;
+    -ms-justify-content: @type;
+    justify-content: @type;
+  }
+  
+  .transition(@type:all linear 0.3s) {
+    -webkit-transition: @type;
+    -moz-transition: @type;
+    -o-transition: @type;
+    transition: @type;
+  }
+  
+  .noselect(@type: none) {
+    -webkit-touch-callout: @type; /* iOS Safari */
+    -webkit-user-select: @type; /* Chrome/Safari/Opera */
+    -khtml-user-select: @type; /* Konqueror */
+    -moz-user-select: @type; /* Firefox */
+    -ms-user-select: @type; /* Internet Explorer/Edge */
+    user-select: @type; /* Non-prefixed version, currently not supported by any browser */
+  }
+  .background(@url) {
+    background: url(@url) no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+  }
+
+  @font-face {
+    font-family: 'Univers_LT_59_Ultra_Condensed';
+    src:url('./font/Univers_LT_59_Ultra_Condensed/Univers_LT_59_Ultra_Condensed.eot') format('eot'), /* IE9 Compat Modes */
+        url('./font/Univers_LT_59_Ultra_Condensed/Univers_LT_59_Ultra_Condensed.woff') format('woff'), /* Modern Browsers */
+        url('./font/Univers_LT_59_Ultra_Condensed/Univers_LT_59_Ultra_Condensed.ttf')  format('ttf'), /* Safari, Android, iOS */
+        url('./font/Univers_LT_59_Ultra_Condensed/Univers_LT_59_Ultra_Condensed.svg') format('svg'); /* Legacy iOS */
+    font-weight:normal;
+    font-style: normal;
+  }
+
+  .font-family() {
+    font-family: "Univers_LT_59_Ultra_Condensed";
+  }
